@@ -7,10 +7,8 @@ export default Component.extend({
     
   async init() {
     this._super(...arguments);
+    // api call  GET baseurl/posts
     const posts =  await this.store.findAll('post');
-    this.set('posts',posts);
-    const firstPost = await this.store.peekRecord('post',1);
-
+    this.set('posts',posts); 
   }
 });
-
