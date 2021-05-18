@@ -1,7 +1,6 @@
 <h1>i am postlist</h1>
 
-{{#each posts as |post|}}
-<p>{{post.title}}</p>
+<p>{{article.title}}</p>
+{{#each article.comments as |comment|}}
+<p>{{comment.body}}</p>
 {{/each}}
-
-
