@@ -1,0 +1,24 @@
+
+<h1> Employees Details</h1>
+<table id="emp-details" class="form-container">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Place</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each employees as |emp|}}
+    <tr>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.place}}</td>
+      <td>{{emp.position}}</td>
+      
+
+    </tr> 
+    {{/each}}
+ </tbody>
+</table>

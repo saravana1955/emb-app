@@ -1,0 +1,38 @@
+.form-container {
+    margin-right: 10%;
+    margin-left: 40%;
+    border-radius: 10px;
+}
+
+#emp-details {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 30%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#emp-details td,
+#emp-details th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#emp-details tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#emp-details tr:hover {
+    background-color: #ddd;
+}
+
+#emp-details th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1cc3ec;
+    color: white;
+}
