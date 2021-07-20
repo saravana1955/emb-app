@@ -1,7 +1,6 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-    name: "faiyaz",
     employees: null,
 
     init() {
