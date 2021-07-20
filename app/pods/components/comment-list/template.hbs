@@ -1,0 +1,62 @@
+
+
+<style>
+    h1{
+        text-align: center;
+    background:yellow;
+    padding: 20px;
+   
+    }
+    h2{
+        padding: 15px;
+        background:greenyellow;
+         width:fit-content;
+    }
+ #employe{
+       width: 50%;
+  border-collapse: collapse;
+ }
+    #employe td,#employe th
+    {
+        text-align: center;
+     border: 1px solid black;
+     padding: 10px;
+    }
+    
+    #employe th{
+        text-transform: uppercase;
+        padding:12px;
+        background:green;
+        color: white;
+    }
+    #employe tr:nth-child(even){
+        background-color: #f2f2f2;
+        }
+     #employe tr:hover {
+         background-color: #ddd;
+         }
+    #employe th:hover{
+        color:red;
+        background: lightskyblue;
+    }     
+</style>
+
+<h2>Employees Details</h2>
+
+<table id="employe">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>place</th>
+        <th>salary</th>
+    </tr>
+{{#each employees as |employee|}}
+<tr>
+ <td>{{employee.name}}</td>
+ <td>{{employee.age}}</td>
+ <td>{{employee.place}}</td>
+  <td>{{employee.salary}}</td>
+  </tr>
+{{/each}}
+
+</table>
