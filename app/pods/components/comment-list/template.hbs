@@ -1,0 +1,16 @@
+{{!-- {{name}} --}}
+
+<table>
+<thead >
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+</thead>
+<tbody>
+{{#each employees as |emp|}}
+<tr>
+<td>{{emp.name}}</td>  <td>{{emp.age}}</td>  <td>{{emp.salary}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>   
