@@ -1,11 +1,15 @@
 import Component from '@ember/component';
-import {inject as service} from '@ember/service';
+
 
 
 export default Component.extend({
-  store: service(),
-    
+ employees:null,
+ newName:"",
+ newAge:"",
+ newSalary:"",
+     
   init() {
+
     this._super(...arguments);
     const employees = [
         {
@@ -25,5 +29,45 @@ export default Component.extend({
         }
       ];
       this.set('employees',employees)
+  },
+
+actions:{
+  addbtn()
+  {
+    let newArr={
+      name: this.get("newName"),
+      age:this.get("newAge") ,
+      salary: this.get("newSalary")
+    };
+    this.get('employees').pushObject(newArr);
+    this.set("newName","");
+    this.set("newAge","");
+    this.set("newSalary","");
+    document.getElementById("user-question").value=null;
+    document.getElementById("user-question1").value=null;
+    document.getElementById("user-question2").value=null;
+   },
+
+  nameChange(e)
+  {
+    this.set("newName",e.target.value);
+    
+  },
+
+  
+  ageChange(e)
+  {
+    this.set("newAge",e.target.value);
+    
+  },
+
+ 
+  salaryChange(e)
+  {
+    this.set("newSalary",e.target.value);
+    
   }
+}
 });
+
+

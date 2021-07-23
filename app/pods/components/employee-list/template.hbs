@@ -1,11 +1,46 @@
-<h1>TABLE</h1>
+<h1 style="color: blueviolet;">FORM</h1>
 
+{{!-- <input placeholder="NAME" type="text" onchange={{action "nameChange"}}> --}}
+
+
+
+
+
+
+
+
+<div>
+ <label for="user-question">Name:</label>
+<input id="user-question" type="text" placeholder="Enter the Name"  oninput={{action "nameChange"}} />
+</div>
+
+
+
+<div>
+<label for="user-question1">Age:</label>
+<input id="user-question1" type="number" placeholder="Enter the Age"  oninput={{action "ageChange"}} />
+</div>
+
+
+
+<div>
+<label for="user-question2">Salary:</label>
+<input id="user-question2" type="number" placeholder="Enter the Salary"  oninput={{action "salaryChange"}} />
+</div>
+
+
+
+<button onclick={{action "addbtn"}}>ADD</button>
 
 <style>
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 25%;
+margin-left: 0; 
+  margin-right:0;
+  margin-top: 10px;
+  
 }
 
 td, th {
@@ -17,6 +52,49 @@ td, th {
 tr{
   background-color: #dddddd;
 }
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
 </style>
 <table>
   <thead>
@@ -40,8 +118,3 @@ tr{
   </tbody>
  
 </table>
-
-
-
-
- 
