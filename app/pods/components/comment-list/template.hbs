@@ -1,62 +1,47 @@
+<div class="maindiv" >
 
+    <div class="divform">
+<h2>Employees Enter Details</h2>
+     <label for="name">Name</label><br>
+<input id="name" type="text" oninput={{action "onNameChanger"}} placeholder="Enter Name" /><br>
+  <label for="age">Age</label><br>
+<input id="age" type="text" oninput={{action "onAgeChanger"}} placeholder="Enter Age" /><br>
+  <label for="place">Place</label><br>
+<input id="place" type="text" oninput={{action "onPlaceChanger"}} placeholder="Enter Place" /><br>
+  <label for="salary">Salary</label><br>
+<input id="salary" type="text" oninput={{action "onSalaryChanger"}} placeholder="Enter Salary" /><br>
+ <label for="phone">Phone Number</label><br>
+<input id="phone" type="tel" oninput={{action "onPhoneChanger"}} placeholder="123-4578-678"/><br>
+<label for="email">Email</label><br>
+<input id="email" type="email" oninput={{action "onEmailChanger"}} placeholder="work@gmail.com" /><br><br>
 
-<style>
-    h1{
-        text-align: center;
-    background:yellow;
-    padding: 20px;
-   
-    }
-    h2{
-        padding: 15px;
-        background:greenyellow;
-         width:fit-content;
-    }
- #employe{
-       width: 50%;
-  border-collapse: collapse;
- }
-    #employe td,#employe th
-    {
-        text-align: center;
-     border: 1px solid black;
-     padding: 10px;
-    }
-    
-    #employe th{
-        text-transform: uppercase;
-        padding:12px;
-        background:green;
-        color: white;
-    }
-    #employe tr:nth-child(even){
-        background-color: #f2f2f2;
-        }
-     #employe tr:hover {
-         background-color: #ddd;
-         }
-    #employe th:hover{
-        color:red;
-        background: lightskyblue;
-    }     
-</style>
+ <button id="btn" {{action "addclick"}}>Add Details</button>
 
-<h2>Employees Details</h2>
+</div>
+<div class="divtable">
 
+<h2>Employees Table</h2>
 <table id="employe">
     <tr>
         <th>name</th>
         <th>age</th>
         <th>place</th>
         <th>salary</th>
+        <th>phone</th>
+        <th>email</th>
     </tr>
+
 {{#each employees as |employee|}}
 <tr>
  <td>{{employee.name}}</td>
  <td>{{employee.age}}</td>
  <td>{{employee.place}}</td>
   <td>{{employee.salary}}</td>
+  <td>{{employee.phone}}</td>
+  <td>{{employee.email}}</td>
   </tr>
 {{/each}}
 
 </table>
+</div>
+</div>

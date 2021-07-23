@@ -1,0 +1,90 @@
+
+    h1{
+        text-align: center;
+    background:yellow;
+    padding: 20px;
+    margin-left: 20px;
+   
+    }
+    h2{
+        padding: 15px;
+        background:greenyellow;
+         width:fit-content;
+    }
+    .main{
+        position: fixed;
+        width: 100%;overflow:auto;
+      }
+     
+     .divform{
+     
+        float:left;
+        width: 50%;
+        margin-left:10%;
+       
+         
+     }
+      .divtable{
+        
+        float:right;
+        width: 40%;
+        
+      }
+
+  /* table Style*/
+      
+ #employe{
+      
+  border-collapse: collapse;
+ }
+    #employe td,#employe th
+    {
+        text-align: center;
+     border: 1px solid black;
+     padding: 10px;
+    }
+    
+    #employe th{
+        text-transform: uppercase;
+        padding:12px;
+        background:green;
+        color: white;
+    }
+    #employe tr:nth-child(even){
+        background-color: #f2f2f2;
+        }
+     #employe tr:hover {
+         background-color: #ddd;
+         }
+    #employe th:hover{
+        color:red;
+        background: lightskyblue;
+    }     
+/* form Style */
+
+label{
+    color: blue;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+}
+input[type=text],#phone,#email{
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: green;
+    font-weight: bold;
+}
+#btn{
+    padding: 10px;
+   color: brown;
+   font-size: 20px;
+   border: 5px solid #ccc;
+   border-radius: 8px;
+    
+}
+#btn:hover{
+background-color: black;
+}
