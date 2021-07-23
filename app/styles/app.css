@@ -1,14 +1,28 @@
 .form-container {
-    margin-right: 10%;
+    margin-right: 40%;
     margin-left: 40%;
     border-radius: 10px;
+}
+
+.control-label {
+    font-family: inherit;
+    font-weight: 800;
+}
+
+.form-control {
+    width: fit-content;
+    margin-left: 0%;
+    margin-right: 10%;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+    padding: 5px;
 }
 
 #emp-details {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    margin-top: 20px;
-    margin-left: 30%;
 }
 
 h1 {
@@ -33,6 +47,6 @@ h1 {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: #1cc3ec;
+    background-color: #26d49a;
     color: white;
 }
