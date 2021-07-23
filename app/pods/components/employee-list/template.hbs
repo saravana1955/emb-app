@@ -1,0 +1,28 @@
+{{!-- {{name}} --}}
+<form id="myForm">
+{{#each keys as |key|}}
+<label for="Name">{{key}}</label>
+<input type="text" id={{key}} placeholder="Enter your {{key}}">
+<br>
+{{/each}}
+<input value="Submit" onclick={{action "addUser"}} type="button">
+</form>
+
+
+<table>
+<thead >
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>    
+</thead>
+<tbody>
+{{#each employees as |emp |}}
+<tr>
+    <td>{{emp.name}}</td> 
+         <td>{{emp.age}}</td> 
+             <td>{{emp.salary}}</td>
+</tr>
+{{/each}}
+</tbody>
+</table>   
+
