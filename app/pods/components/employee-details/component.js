@@ -42,14 +42,6 @@ export default Component.extend({
             this.get("employees").pushObject(newEmp);
             this.resetAllFieldValue();
         },
-        onNameAdd(e) {
-            this.set("newName", e.target.value);
-        },
-        onAgeAdd(e) {
-            this.set("newAge", e.target.value);
-        },
-        onSalaryAdd(e) {
-            this.set("newSalary", e.target.value);
-        },
+
     },
 });
