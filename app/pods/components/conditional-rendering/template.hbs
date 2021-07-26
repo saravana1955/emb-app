@@ -1,0 +1,31 @@
+<h1> Employees Details</h1>
+<div class="form-container">
+  <p class="check">Show Active Employees<input type="checkbox" class="checkbox" name="check" oninput={{action "onShowActive"}}></p>
+
+<table id="emp-details" >
+  
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Salary</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each employeesList as |emp|}}
+    <tr>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td>{{emp.salary}}</td>
+      {{#if isShowActiveChecked}}
+      <td>{{emp.status}}</td>
+      {{else}}
+      <td>{{emp.status}}</td>
+      {{/if}}
+    </tr> 
+    {{/each}}
+    
+ </tbody>
+</table>
+</div>
