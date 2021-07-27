@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "description": "Small description for emb-app goes here",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faiyazbits/emb-app.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "Anish",
   "directories": {
-    "doc": "doc",
     "test": "tests"
   },
   "scripts": {
@@ -49,6 +51,12 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
-    "ember-truth-helpers": "^3.0.0"
-  }
+    "ember-truth-helpers": "^3.0.0",
+    "express": "^4.17.1"
+  },
+  "main": ".eslintrc.js",
+  "bugs": {
+    "url": "https://github.com/faiyazbits/emb-app/issues"
+  },
+  "homepage": "https://github.com/faiyazbits/emb-app#readme"
 }
