@@ -9,16 +9,17 @@ margin-left: 0;
   
 }
 
-td, th {
+td, th{
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
-tr{
+tr,thead{
   background-color: #dddddd;
 }
 
 h1{
     color: darkgreen;
 }
+

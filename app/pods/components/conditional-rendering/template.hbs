@@ -1,37 +1,53 @@
-<h1>TABLE</h1>
+ <h1>TABLE</h1>
+
+{{!-- <div id="checkbox">
+<label for="admin-checkbox">Check_box</label>
+<Input
+  @id="admin-checkbox"
+  @type="checkbox"
+  @checked={{this.isChecked}}
+/>
+</div> --}}
+
+<div id="checkbox">
+{{!-- <form action="/action_page.php"> --}}
+<label for="admin-checkbox"> People Who Are Active</label> 
+<input type="checkbox" id="admin-checkbox"  checked={{bool}} onchange={{action "isChecked" bool}}/>
+  {{!-- <label @for="activepeople"> People Who Are Active</label> --}}
+{{!-- </form> --}}
+</div>
+
 
 
 <table>
-  <thead>
-    <tr>
-    <th>name</th>
-    <th>age</th>
-    <th>salary</th>
-    <th>status</th>
-  </tr>
-  </thead>
-  <tbody>
-     
-{{#each employees as |employee|}}
-    <tr>
-      <td>{{employee.name}}</td>
-      <td>{{employee.age}}</td>
-      <td>{{employee.salary}}</td>
-      {{#if isChecked}}
-      <td>{{employee.status}}</td>
-      {{else}}
-      <td>{{employee.status}}</td>
-      {{/if}}
-    </tr> 
-    {{/each}}
-  </tbody>
- 
+<thead >
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Status</th>   
+</thead>
+<tbody>
+
+
+{{#each employeesList as |emp|}}
+    {{#if bool}}
+            <tr>
+                <td>{{emp.name}}</td> 
+                    <td>{{emp.age}}</td> 
+                        <td>{{emp.salary}}</td>
+                            <td>{{emp.status}}</td>
+                            {{!-- <h1>I'm if condition</h1> --}}
+            </tr>
+    {{else}}
+                <tr>
+                    <td>{{emp.name}}</td> 
+                        <td>{{emp.age}}</td> 
+                            <td>{{emp.salary}}</td>
+                                <td>{{emp.status}}</td>
+                </tr>
+    {{/if}}
+{{/each}}
+
+
+</tbody>
 </table>
-
-<form action="/action_page.php">
-  <input @type="checkbox" @id="activepeople" oninput={{action "ischecked"}} >
-  <label for="activepeople"> People Who Are Active</label>
-</form>
-
-
-  
