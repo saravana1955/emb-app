@@ -1,26 +1,36 @@
 {{!-- {{name}} --}}
 <form id="myForm">
-{{#each keys as |key|}}
-<label for="Name">{{key}}</label>
-<input type="text" id={{key}} placeholder="Enter your {{key}}">
-<br>
-{{/each}}
+
+<div>
+    <label for="Name">Name</label>
+    <input type="text"  value={{newName}} oninput={{action (mut newName) value="target.value"}} placeholder="Enter your Name">
+</div>
+
+<div>
+    <label for="age">Age</label>
+    <input type="text"  value={{newAge}} oninput={{action (mut newAge) value="target.value"}} placeholder="Enter your Age">
+</div>
+<div>
+    <label for="salary">Salary</label>
+    <input type="text"  value={{newSalary}} oninput={{action (mut newSalary) value="target.value"}} placeholder="Enter your Salary">
+</div>
+
 <input value="Submit" onclick={{action "addUser"}} type="button">
 </form>
 
-
 <table>
-<thead >
+<thead>
     <th>Name</th>
     <th>Age</th>
-    <th>Salary</th>    
+    <th>Salary</th>   
 </thead>
 <tbody>
-{{#each employees as |emp |}}
+{{#each employees as |emp index|}}
 <tr>
     <td>{{emp.name}}</td> 
          <td>{{emp.age}}</td> 
              <td>{{emp.salary}}</td>
+              
 </tr>
 {{/each}}
 </tbody>

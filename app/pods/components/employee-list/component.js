@@ -7,6 +7,10 @@ export default Component.extend({
   
   employees:null,
   keys:null,
+  newVal:"",
+  newName: "",
+  newAge: "",
+  newSalary: "",
 
   init(){
     this._super(...arguments);
@@ -32,27 +36,24 @@ export default Component.extend({
     this.set("keys",keys);
  },
 
+ resetFieldValue(){
+    this.set('newName', '');
+    this.set('newAge', '');
+    this.set('newSalary', '');
+ },
+
  actions: {
     addUser(){
-        let newData = {};
-       
-        
-        let keys=this.get('keys');
-        for(let i=0;i<keys.length;i++){
-            
-            var objKey = keys[i];
-            newData[objKey] = document.getElementById(objKey).value; 
-            
-        }
-       
-        this.get("employees").pushObject(newData);
-       
-        document.getElementById("myForm").reset();
-    }
+        let newEmp = {
+            name: this.get("newName"),
+            age: this.get("newAge"),
+            salary: this.get("newSalary"),
+        };
+        this.get("employees").pushObject(newEmp);
+        this.resetFieldValue();
+    },
 
- }
+}
 
 });
-
-
  

@@ -1,0 +1,47 @@
+{{!-- {{yield}} --}}
+<h1 id="heading">Show Active Employees</h1>
+<div id="checkbox">
+<label for="admin-checkbox">Show_active_Employee</label>
+
+{{!-- <Input
+  @id="admin-checkbox"
+  @type="checkbox"
+  @checked={{this.isAdmin}}
+  class="checkbox-size"
+/> --}}
+
+<input type="checkbox" checked={{bool}} onchange={{action "inputChanged" bool}}>
+</div>
+
+<table>
+<thead >
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>Status</th>   
+</thead>
+<tbody>
+
+
+{{#each employeesList as |emp|}}
+    {{#if bool}}
+            <tr>
+                <td>{{emp.name}}</td> 
+                    <td>{{emp.age}}</td> 
+                        <td>{{emp.salary}}</td>
+                            <td>{{emp.status}}</td>
+                            {{!-- <h1>I'm if condition</h1> --}}
+            </tr>
+    {{else}}
+                <tr>
+                    <td>{{emp.name}}</td> 
+                        <td>{{emp.age}}</td> 
+                            <td>{{emp.salary}}</td>
+                                <td>{{emp.status}}</td>
+                </tr>
+    {{/if}}
+{{/each}}
+
+</tbody>
+</table> 
+
