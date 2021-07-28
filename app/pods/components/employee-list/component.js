@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import {inject} from '@ember/service';
 
 
 
@@ -7,6 +8,8 @@ export default Component.extend({
  newName:"",
  newAge:"",
  newSalary:"",
+ name: inject(),
+ name1:"Anish",
      
   init() {
 

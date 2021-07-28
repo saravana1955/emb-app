@@ -1,14 +1,15 @@
 import Component from '@ember/component';
-import {inject as service} from '@ember/service';
+import {inject} from '@ember/service';
 
 
 export default Component.extend({
-  store: service(),
-    
+
+  name: inject(),
   async init() {
     this._super(...arguments);
-    // api call  GET baseurl/posts
-    const posts =  await this.store.findAll('post');
-    this.set('posts',posts); 
+    
+    // // api call  GET baseurl/posts
+    // const posts =  await this.store.findAll('post');
+    // this.set('posts',posts); 
   }
 });
