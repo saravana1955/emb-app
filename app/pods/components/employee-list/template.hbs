@@ -1,4 +1,9 @@
 {{!-- {{name}} --}}
+
+<h1>{{name.fullname}}</h1>
+
+<p>{{empLen}}</p>
+
 <form id="myForm">
 
 <div>
@@ -25,14 +30,25 @@
     <th>Salary</th>   
 </thead>
 <tbody>
-{{#each employees as |emp index|}}
+{{#each name.employees as |emp index|}}
 <tr>
     <td>{{emp.name}}</td> 
          <td>{{emp.age}}</td> 
-             <td>{{emp.salary}}</td>
-              
+             <td>{{emp.salary}}</td>             
 </tr>
 {{/each}}
 </tbody>
 </table>   
 
+<div>
+<h2>List of employees</h2>
+<ol id="employeelist">
+{{#each name.employees as |emp ind|}}
+    <li>
+        Name:{{emp.name}}<br>
+        Age:{{emp.age}}<br>
+        Salary:{{emp.salary}}<br>
+    </li>
+{{/each}}
+</ol>
+</div>
