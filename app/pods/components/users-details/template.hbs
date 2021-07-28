@@ -1,0 +1,27 @@
+<div >
+  <h1>Users Details in Table</h1>
+<table id="emp-details" class="form-container">
+  <thead>
+    <tr>
+     <th>Name</th>
+      <th>Age</th>
+      <th>Place</th>
+        <th>Position</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    {{#each userslist as |user|}}
+    <tr>
+      <td>{{user.name}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.place}}</td>
+      <td>{{user.position}}</td>
+
+
+
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
