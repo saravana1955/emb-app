@@ -21,15 +21,16 @@ export default Component.extend({
             },
         ];
         this.set("employees", employees);
-        setTimeout(() => {
-            this.set("fullName", "Mohamed Umar");
-        }, 3000);
+        this.changeName = this.changeName.bind(this);
     },
     resetAllFieldValue() {
         this.set('newName', '');
         this.set('newAge', '');
         this.set('newSalary', '');
-        console.log("its working")
+    },
+
+    changeName(){
+        this.set('fullName','faiyaz');
     },
 
     actions: {

@@ -1,12 +1,10 @@
-
-<h1> Employees Details</h1>
 <table id="emp-details" class="form-container">
   <thead>
     <tr>
       <th>Name</th>
       <th>Age</th>
-      <th>Place</th>
-      <th>Position</th>
+      <th>Salary</th>
+    
     </tr>
   </thead>
   <tbody>
@@ -14,11 +12,13 @@
     <tr>
       <td>{{emp.name}}</td>
       <td>{{emp.age}}</td>
-      <td>{{emp.place}}</td>
-      <td>{{emp.position}}</td>
-      
+      <td>{{emp.salary}}</td>
 
-    </tr> 
+
+
+    </tr>
     {{/each}}
- </tbody>
+  </tbody>
 </table>
+
+<button onclick={{action "onNameClick"}}>change name to faiyaz</button>

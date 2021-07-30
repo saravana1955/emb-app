@@ -24,30 +24,10 @@
 <button onclick={{action "onAdd"}} class="addBtn">Add</button>
 </div>
 <div >
+  <h2>fullname: {{fullName}}</h2>
   <h1>Employees List</h1>
-<table id="emp-details" class="form-container">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Salary</th>
-    
-    </tr>
-  </thead>
-  <tbody>
-    {{#each employees as |emp|}}
-    <tr>
-      <td>{{emp.name}}</td>
-      <td>{{emp.age}}</td>
-      <td>{{emp.salary}}</td>
-
-
-
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+  {{employee-table
+    employees=employees
+    changeName=changeName
+  }}
 </div>
-
-<h2>Set timeout in 3s</h2>
-<p>{{fullName}}</p>
