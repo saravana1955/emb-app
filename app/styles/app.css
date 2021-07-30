@@ -50,3 +50,7 @@ h1 {
     background-color: #26d49a;
     color: white;
 }
+
+.check {
+    text-align: end;
+}

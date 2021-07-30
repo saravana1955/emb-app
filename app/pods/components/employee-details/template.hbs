@@ -5,19 +5,19 @@
   <div class="form-group">
     <label class="control-label col-sm-2" for="name">Name</label>
     <div>
-<input type="text" class="form-control"  value={{newName}} oninput={{action "onNameAdd"}}  placeholder="Enter Your Name Here">
+<input type="text" class="form-control"  value={{newName}} oninput={{action (mut newName) value="target.value"}}  placeholder="Enter Your Name Here">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="age">Age</label>
     <div>
-      <input type="text" class="form-control" value={{newAge}} oninput={{action "onAgeAdd"}} placeholder="Enter Your Age Here">
+      <input type="text" class="form-control" value={{newAge}} oninput={{action (mut newAge) value="target.value"}} placeholder="Enter Your Age Here">
     </div>
   </div>
   <div class="form-group">
     <label class="control-label col-sm-2" for="salary">Salary</label>
     <div>
-      <input type="text" class="form-control" value={{newSalary}} oninput={{action "onSalaryAdd"}} placeholder="Enter Your Salary Here">
+      <input type="text" class="form-control" value={{newSalary}} oninput={{action (mut newSalary) value="target.value"}} placeholder="Enter Your Salary Here">
     </div>
   </div>
 
