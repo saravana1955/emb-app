@@ -29,6 +29,6 @@ export default Service.extend({
             age: 20,
             salary: 45,
           },
-    ]
+    ],
 
 });

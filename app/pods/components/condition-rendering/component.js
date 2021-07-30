@@ -60,6 +60,10 @@ export default Component.extend({
         this.set('employeesList', activeEmpList)
         this.set('bool',true);
       }
+    },
+
+    changeName(){
+      var newName = "Suriya";
     }
   }
 });

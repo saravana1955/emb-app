@@ -1,8 +1,8 @@
 {{!-- {{name}} --}}
-
+{{yield}}
 <h1>{{name.fullname}}</h1>
 
-<p>{{empLen}}</p>
+<h1><p>{{empava}}</p></h1>
 
 <form id="myForm">
 
@@ -10,7 +10,6 @@
     <label for="Name">Name</label>
     <input type="text"  value={{newName}} oninput={{action (mut newName) value="target.value"}} placeholder="Enter your Name">
 </div>
-
 <div>
     <label for="age">Age</label>
     <input type="text"  value={{newAge}} oninput={{action (mut newAge) value="target.value"}} placeholder="Enter your Age">
@@ -23,32 +22,20 @@
 <input value="Submit" onclick={{action "addUser"}} type="button">
 </form>
 
-<table>
-<thead>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Salary</th>   
-</thead>
-<tbody>
-{{#each name.employees as |emp index|}}
-<tr>
-    <td>{{emp.name}}</td> 
-         <td>{{emp.age}}</td> 
-             <td>{{emp.salary}}</td>             
-</tr>
-{{/each}}
-</tbody>
-</table>   
+<div>
+    <h2>Name:{{namVar}}</h2>
+
+    {{employee-table
+    employees = name.employees
+    changeName = changeName
+    }}
+</div>
+
 
 <div>
-<h2>List of employees</h2>
-<ol id="employeelist">
-{{#each name.employees as |emp ind|}}
-    <li>
-        Name:{{emp.name}}<br>
-        Age:{{emp.age}}<br>
-        Salary:{{emp.salary}}<br>
-    </li>
-{{/each}}
-</ol>
+    {{condition-rendering}}
 </div>
+
+{{!-- {{#employee-table  keys=keys}}
+    "These are keys"
+{{/employee-table}} --}}

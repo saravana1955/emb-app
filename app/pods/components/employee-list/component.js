@@ -15,7 +15,13 @@ export default Component.extend({
     newName: "",
     newAge: "",
     newSalary: "",
-    
+    emplen:"",
+    namVar:"vashanth",
+
+    emplen : computed('len', function(){
+        return `${this.len}`;
+    }),
+
     init() {
         this._super(...arguments);
 
@@ -52,12 +58,22 @@ export default Component.extend({
         this.set('employees', this.name.employees);
         this.set('employeesList', this.name.employees);
         this.set('keys', keys);
-      },   
+        console.log(this.name.employees.length);
+        const len = this.name.employees.length;
+        const empava = len.emplen;
+        
+
+        this.changeName = this.changeName.bind(this);
+    },   
     
     resetFieldValue(){
         this.set('newName', '');
         this.set('newAge', '');
         this.set('newSalary', '');
+    },
+
+    changeName(){
+        this.set("namVar", 'Suriya');
     },
 
     actions: {
@@ -70,6 +86,7 @@ export default Component.extend({
             //console.log(this.employee.name);
             this.get("employees").pushObject(newEmp);
             this.resetFieldValue();
+            //console.log(this.get(len));
         }
 
     }
