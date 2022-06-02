@@ -1,3 +1,22 @@
 
 
 <h1>i am login</h1>
+
+
+
+
+<div >
+  <label for="input"  >Firstname</label>
+  <input type="text"  disabled = {{disableUndobtn}}
+  oninput={{action 'onInput'}}
+  placeholder="name" value = {{name}}/>
+</div>
+<div>
+  <label for="input"   >lastname</label>
+  <input type="number"   disabled = {{disableUndobtn}}  placeholder="age"   oninput={{action 'onInput1'}} value = age>
+
+  <button type="button" onclick={{action 'off'}}  >Fill</button>
+
+  <button type="button"      disabled = {{disab}}  >save</button>
+</div>
+<br>

@@ -1,0 +1,46 @@
+<h1>CRUD</h1>
+
+
+<br>
+<br>
+<div >
+  <label for="input" >Employee Name</label>
+  {{input type="text"   placeholder="name" value = name}}
+</div>
+<div>
+  <label for="input"  >Age </label>
+{{input type="number" placeholder="age"  value = age}}
+
+<button type="button" onclick={{action 'note'}}>{{buttonvalue}}</button>
+</div>
+<br>
+
+
+<table  id="customers">
+  <thead>
+  <th>name</th>
+  <th>age</th>
+  <th>delete</th>
+  <th>edit</th>
+  </thead>
+  <tbody>
+  {{#each employees as |emp index|}}
+    <tr>
+      <td>{{emp.name}}</td>
+      <td>{{emp.age}}</td>
+      <td><input type="button" value="delete" {{action 'delete' emp}} ></td>
+      <td><input type="button" value="edit" {{action 'edit' emp index}} ></td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+
+
+{{#link-to 'login'}}
+<button type="button">login</button>
+
+
+{{/link-to}}
+
+
